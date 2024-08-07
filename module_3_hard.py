@@ -9,6 +9,9 @@ def calculate_structure_sum(data_structure):
         elif isinstance(element, list):
             for i in element:
                 recursive_sum(i)
+        elif isinstance(element, set):
+            for i in element:
+                recursive_sum(i)
         elif isinstance(element, dict):
             for key, value in element.items():
                 recursive_sum(key)
